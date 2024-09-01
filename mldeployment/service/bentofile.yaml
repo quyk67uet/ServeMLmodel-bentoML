@@ -1,0 +1,11 @@
+service: "service:mnist_service"  # Same as the argument passed to bentoml
+labels:
+  owner: QuyMinh
+  stage: dev
+include:
+  - "*.py"  # A pattern for matching which files to include in the bento
+python:
+   packages:  # Additional pip packages required by the service
+     - scikit-learn
+     - numpy
+     - joblib
